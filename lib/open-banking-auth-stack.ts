@@ -135,11 +135,11 @@ export class OpenBankingAuthStack extends cdk.Stack {
         SM_JWKS_SECRET_NAME: <string>process.env.SM_JWKS_SECRET_NAME
       }
     });
-    customSecretsManagerLambda.node.addDependency(oidc_service);
-
-    new CustomResource(this, 'JwksSecretsManager', {
-      serviceToken: customSecretsManagerLambda.functionArn
-    });
+    //customSecretsManagerLambda.node.addDependency(oidc_service);
+//
+//    new CustomResource(this, 'JwksSecretsManager', {
+//      serviceToken: customSecretsManagerLambda.functionArn
+//    });
     // ------ END OF SECRETS MANAGER CONFIGURATION FOR JWKS INFORMATION
 
   }
